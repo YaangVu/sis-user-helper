@@ -1,0 +1,32 @@
+{
+  "name": "yaangvu/sis-user-helper",
+  "description": "Laravel YaangVu Base Sis User Helper",
+  "keywords": [
+    "laravel",
+    "lumen",
+    "base",
+    "toprate",
+    "exception"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^8.0",
+    "illuminate/support": "9.x-dev",
+    "yaangvu/laravel-exception": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7|^8|^9"
+  },
+  "authors": [
+    {
+      "name": "Yaang Vu",
+      "email": "yaangvu@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "YaangVu\\SisUserHelper\\": "src/"
+    }
+  }
+}
