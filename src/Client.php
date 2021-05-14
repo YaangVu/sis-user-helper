@@ -6,21 +6,21 @@ namespace YaangVu\SisUserHelper;
 
 class Client
 {
-    private static string $url;
+    private static string $uri;
 
     /**
-     * @param string $url
+     * @param string $uri
      */
-    public static function setClientUrl(string $url): void
+    public static function setClientUri(string $uri): void
     {
-        self::$url = $url;
+        self::$uri = $uri;
     }
 
     /**
      * @return string
      */
-    public static function getClientUrl(): string
+    public static function getClientUri(): string
     {
-        return self::$url;
+        return self::$uri;
     }
 }

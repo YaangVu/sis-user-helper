@@ -13,9 +13,9 @@ class HttpClient
 {
     static function get(string $path, array $params = [], array $headers = [])
     {
-        $url = Client::getClientUrl();
-        Log::info("Call API to $url/$path with params: ", $params);
-        $response = Http::withHeaders($headers)->get($url . $path, $params);
+        $uri = Client::getClientUri();
+        Log::info("Call API to $uri/$path with params: ", $params);
+        $response = Http::withHeaders($headers)->get($uri . $path, $params);
 
         $statusResponse = (int)$response->status();
 
@@ -23,7 +23,7 @@ class HttpClient
             throw new BaseException($response->body(), new Exception(), $statusResponse);
         }
 
-        Log::info("Response from API $url/$path with body: " . $response->body());
+        Log::info("Response from API $uri/$path with body: " . $response->body());
 
         return json_decode($response->body(), true);
     }
