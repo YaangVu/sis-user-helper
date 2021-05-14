@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "64803bef5bab8a9947a49d1160ba8485",
+    "content-hash": "00a926060ebb075900e57ab2c99662a6",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -2473,6 +2473,51 @@
                 "source": "https://github.com/YaangVu/laravel-exception/tree/v1.0.1"
             },
             "time": "2021-05-14T07:10:10+00:00"
+        },
+        {
+            "name": "yaangvu/sis-constant",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/YaangVu/sis-constant.git",
+                "reference": "4af86fd65ff1fadec620c544c0b1ccbc5d2acc0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/YaangVu/sis-constant/zipball/4af86fd65ff1fadec620c544c0b1ccbc5d2acc0b",
+                "reference": "4af86fd65ff1fadec620c544c0b1ccbc5d2acc0b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^6.0|^7.0|^7.3|^7.4|^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "YaangVu\\Constant\\": "/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yaang Vu",
+                    "email": "yaangvu@gmail.com"
+                }
+            ],
+            "description": "Laravel Sis Constant",
+            "keywords": [
+                "api",
+                "constant",
+                "toprate"
+            ],
+            "support": {
+                "issues": "https://github.com/YaangVu/sis-constant/issues",
+                "source": "https://github.com/YaangVu/sis-constant/tree/v1.0.1"
+            },
+            "time": "2021-05-14T17:02:58+00:00"
         }
     ],
     "packages-dev": [
@@ -4510,9 +4555,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "illuminate/support": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

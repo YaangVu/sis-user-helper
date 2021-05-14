@@ -4,6 +4,8 @@
 namespace YaangVu\SisUserHelper;
 
 
+use YaangVu\Constant\CodeConstant;
+
 class UserService
 {
     /**
@@ -14,7 +16,7 @@ class UserService
      */
     public static function getRoles(string $uid, string $sid): mixed
     {
-        return HttpClient::get("$uid/roles", ['sid' => $sid]);
+        return HttpClient::get("$uid/roles", [CodeConstant::SC_ID => $sid]);
     }
 
     /**
@@ -25,7 +27,7 @@ class UserService
      */
     public static function getPermissions(string $uid, string $sid): mixed
     {
-        return HttpClient::get("$uid/permissions", ['sid' => $sid]);
+        return HttpClient::get("$uid/permissions", [CodeConstant::SC_ID => $sid]);
     }
 
     /**
@@ -37,7 +39,7 @@ class UserService
      */
     public function hasRole(string $uid, string $sid, string $role): mixed
     {
-        return HttpClient::get("$uid/has-role", ['sid' => $sid, 'role_name' => $role]);
+        return HttpClient::get("$uid/has-role", [CodeConstant::SC_ID => $sid, 'role_name' => $role]);
     }
 
     /**
@@ -49,7 +51,7 @@ class UserService
      */
     public function hasPermission(string $uid, string $sid, string $permission): mixed
     {
-        return HttpClient::get("$uid/has-role", ['sid' => $sid, 'permission_name' => $permission]);
+        return HttpClient::get("$uid/has-role", [CodeConstant::SC_ID => $sid, 'permission_name' => $permission]);
     }
 
 
@@ -63,6 +65,6 @@ class UserService
      */
     public function get(string $uid, string $sid): mixed
     {
-        return HttpClient::get("/$uid", ['sid' => $sid]);
+        return HttpClient::get("/$uid", [CodeConstant::SC_ID => $sid]);
     }
 }
